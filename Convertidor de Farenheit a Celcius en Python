@@ -1,0 +1,4 @@
+print("==Farenheit a Celsius==")
+GradosFarenheit=input("Escribi los grados en Farenheit: ")
+GradosCelcius= ((int(GradosFarenheit) - 32) *5/9)
+print("tu resultado es: ", GradosCelcius)
