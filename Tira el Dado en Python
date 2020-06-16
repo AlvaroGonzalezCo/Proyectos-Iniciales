@@ -1,0 +1,16 @@
+import random
+
+
+tirarlo = input("Tirar dado?")
+if tirarlo == "si":
+  dado = random.randint(1,6)
+  print(dado)
+  
+
+
+
+else:
+  print("Tenes q poner q si")
+  
+  
+
