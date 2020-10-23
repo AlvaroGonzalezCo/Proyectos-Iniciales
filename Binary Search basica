@@ -1,0 +1,28 @@
+
+def binarySearch(arr, i, d, x):
+
+  while i <= d:
+    mid = i + (d - i) // 2;
+
+    if arr[mid] == x:
+      return mid
+
+    elif arr[mid] < x:
+      i = mid + 1
+
+    elif arr[mid] > x:
+      d = mid - 1
+
+  return -1
+
+arr = [2,5,7,8,10]
+x = 7
+ 
+resultado = binarySearch(arr, 0, len(arr)-1, x)
+
+if resultado != -1:
+  print("tu resultado esta en el index ", resultado)
+
+else:
+  print("la respuesta no esta presente en este array")
+  
