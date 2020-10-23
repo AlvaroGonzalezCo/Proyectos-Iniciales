@@ -1,0 +1,53 @@
+import os, time, sys, random
+
+caracteres = [
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"
+]
+
+os.system('clear')
+
+while True:
+  print("""
+
+          GENERADOR DE CONTRASEÑA
+          
+          [1] 16 caracteres
+          [2] 32 caracteres
+          [3] personalizado
+
+
+
+  """)
+
+  opcion = input("\n[>]:")
+
+  def car16():
+    contraseña = ''
+    for i in range(0, 16):
+      contraseña = contraseña + random.choice((caracteres))
+    print("Tu contraseña de 16 es: "+ contraseña)
+
+  def car32():
+    contraseña = ''
+    for i in range(0, 32):
+      contraseña = contraseña + random.choice((caracteres))
+    print("tu contraseña de 32 es: "+contraseña)
+      
+  if opcion == "1" or opcion == "16":
+      os.system('clear')
+      car16()
+      
+  if opcion == "2" or opcion == "32":
+      os.system('clear')
+      car32()
+      
+  if opcion == "3" or opcion == "personalizado":
+
+    letras = int(input('Introduci la cantidad que quieras \n[>]:'))
+    contraseña= ''
+    for i in range(0, letras):
+      contraseña = contraseña + random.choice((caracteres))
+
+    print(f"Tu contraseña es: ", contraseña)
+
+  
